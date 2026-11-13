@@ -12,13 +12,16 @@ Open `http://localhost:4173/`.
 
 ## Publish
 
-The repository includes a `CNAME` file for `aidrding.fyi`. To publish with GitHub Pages:
+The GitHub Pages workflow publishes the site without the custom-domain file, so the
+GitHub Pages URL remains available while DNS is being prepared.
 
-1. Push this repository to GitHub.
-2. Enable Pages from the `main` branch root.
-3. Point the apex `A` records in Cloudflare DNS to GitHub Pages:
+To connect `aidrding.fyi` after GitHub Pages is live:
+
+1. In the GitHub repository, open **Settings → Pages** and set the custom domain to
+   `aidrding.fyi`.
+2. Point the apex `A` records in Cloudflare DNS to GitHub Pages:
    `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
-4. Point `www` to the GitHub Pages hostname with a `CNAME` record.
-5. Enable HTTPS after GitHub finishes certificate provisioning.
+3. Point `www` to `Bones-star588.github.io` with a `CNAME` record.
+4. Enable HTTPS after GitHub finishes certificate provisioning.
 
 The page remains usable without JavaScript. The copy-email buttons are progressively enhanced.
