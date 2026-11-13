@@ -90,5 +90,99 @@ function initializeCurrentYear() {
   });
 }
 
+function initializeRevealAnimations() {
+  const revealElements = Array.from(document.querySelectorAll("[data-reveal]"));
+
+  if (
+    revealElements.length === 0 ||
+    !("IntersectionObserver" in window) ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    return;
+  }
+
+  document.documentElement.classList.add("reveal-ready");
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    {
+      rootMargin: "0px 0px -10% 0px",
+      threshold: 0.12,
+    },
+  );
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+
+  window.setTimeout(() => {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+  }, 1800);
+
+  console.debug("Reveal animations initialized", {
+    count: revealElements.length,
+  });
+}
+
+function initializeActiveNavigation() {
+  const navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
+  const navigationSections = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+  let animationFrame = null;
+
+  if (navLinks.length === 0 || navigationSections.length === 0) {
+    return;
+  }
+
+  function updateActiveNavigation() {
+    const marker = window.scrollY + window.innerHeight * 0.32;
+    let currentSection = null;
+
+    navigationSections.forEach((section) => {
+      if (section.offsetTop <= marker) {
+        currentSection = section;
+      }
+    });
+
+    navLinks.forEach((link) => {
+      const isCurrent = currentSection?.id === link.getAttribute("href").slice(1);
+
+      if (isCurrent) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    animationFrame = null;
+  }
+
+  function scheduleNavigationUpdate() {
+    if (animationFrame !== null) {
+      return;
+    }
+
+    animationFrame = window.requestAnimationFrame(updateActiveNavigation);
+  }
+
+  window.addEventListener("scroll", scheduleNavigationUpdate, { passive: true });
+  window.addEventListener("resize", scheduleNavigationUpdate);
+  updateActiveNavigation();
+
+  console.debug("Active navigation initialized", {
+    sectionCount: navigationSections.length,
+  });
+}
+
 initializeCopyButtons();
 initializeCurrentYear();
+initializeRevealAnimations();
+initializeActiveNavigation();

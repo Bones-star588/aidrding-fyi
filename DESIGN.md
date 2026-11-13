@@ -2,18 +2,18 @@
 
 ## Overview
 
-A single-page academic profile for Ding Rui. The visual direction is precise and restrained, with sharp rules, generous spacing, one crimson accent, and a landscape photograph of the Shandong University Weihai campus that dissolves into the page background.
+A single-page academic profile for Ding Rui. The visual direction combines a sea-mist neutral field, sharp editorial rules, one crimson accent, cinematic campus photography, and a dark project archive.
 
 ## Color
 
-- Background: `oklch(1 0 0)`
-- Surface: `oklch(0.965 0.006 29)`
-- Ink: `oklch(0.17 0.014 29)`
-- Muted ink: `oklch(0.43 0.015 29)`
-- Rule: `oklch(0.86 0.009 29)`
+- Background: `oklch(0.975 0.008 180)`
+- Surface: `oklch(0.948 0.013 180)`
+- Ink: `oklch(0.17 0.018 185)`
+- Muted ink: `oklch(0.42 0.018 185)`
+- Rule: `oklch(0.84 0.013 180)`
 - Accent: `oklch(0.46 0.19 29)`
 - Accent dark: `oklch(0.38 0.16 29)`
-- Dark surface: `oklch(0.16 0.012 29)`
+- Dark surface: `oklch(0.145 0.014 185)`
 
 ## Typography
 
@@ -25,20 +25,22 @@ A single-page academic profile for Ding Rui. The visual direction is precise and
 
 - Maximum content width: `90rem`.
 - Page gutters: `clamp(1.25rem, 4vw, 4.5rem)`.
-- Desktop hero: asymmetric two-column composition with text at left and a landscape campus photograph at right.
-- Mobile hero: single column with the full-width photograph following the identity and email block.
-- Photograph edges use a four-sided alpha mask so the image blends into the white page background without a visible frame.
+- Desktop hero: asymmetric two-column composition with text at left and two high-resolution Weihai campus photographs crossfading at right.
+- Mobile hero: single column with a full-width campus photo band following the identity and email block.
+- Photograph edges use alpha masks so images dissolve into the sea-mist background without visible frames.
+- Selected projects use a dark record-like list with expandable evidence panels rather than a generic card grid.
 - Sections are separated by full-width rules rather than floating cards.
 - All corners are square to support the record-like academic tone.
 
 ## Components
 
-- Compact sticky header with text navigation.
+- Compact sticky header with text navigation and scroll-aware active state.
 - Email link and optional copy button.
+- Expandable project entries with outcome highlights, metrics, technology, and explicit scope.
 - Rule-separated research interest list.
 - Current education record with a solid accent cap.
-- Dark contact band containing correspondence details and image attribution.
+- Crimson contact band containing correspondence details and image attribution.
 
 ## Motion
 
-No decorative entrance animation. Interaction feedback is limited to color, underline, background, and a 1px pressed movement. All transitions collapse under reduced-motion preferences.
+The hero alternates two campus photographs with slow crossfades and restrained image drift. Project entries reveal on scroll when motion is available and expand natively on interaction. All motion is removed under reduced-motion preferences.

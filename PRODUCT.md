@@ -10,7 +10,7 @@ Academic reviewers, prospective collaborators, and other visitors who need to ve
 
 ## Product Purpose
 
-Provide a stable, public academic profile that clearly connects Ding Rui with Shandong University, the School of Artificial Intelligence, the Weihai campus, and the school email address. Success means a reviewer can confirm all required identity details in seconds without encountering unsupported claims.
+Provide a stable, public academic profile that clearly connects Ding Rui with Shandong University, the School of Artificial Intelligence, the Weihai campus, and the school email address. The same page presents verified software and applied-ML projects with enough evidence for a reviewer to understand scope, implementation, measured results, and remaining limitations.
 
 ## Brand Personality
 
@@ -23,9 +23,9 @@ No fabricated publications, awards, or timelines. Avoid startup landing-page lan
 ## Design Principles
 
 1. Make identity and institutional affiliation visible in the first viewport.
-2. State only information that is known and useful to an academic reviewer.
+2. State only information that is known and useful to an academic reviewer, and distinguish current results from unfinished validation.
 3. Use the campus image as context, not as a substitute for personal information.
-4. Keep navigation and contact actions obvious on both mobile and desktop.
+4. Let projects expand in place so depth is available without forcing every visitor through a long document.
 5. Treat calm, readable presentation as part of scholarly credibility.
 
 ## Accessibility & Inclusion
