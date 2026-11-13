@@ -2,7 +2,7 @@
 
 ## Overview
 
-A single-page academic profile for Ding Rui. The visual direction is precise and restrained, with sharp rules, generous spacing, one crimson accent, and a real photograph of the Shandong University Weihai campus.
+A single-page academic profile for Ding Rui. The visual direction is precise and restrained, with sharp rules, generous spacing, one crimson accent, and a landscape photograph of the Shandong University Weihai campus that dissolves into the page background.
 
 ## Color
 
@@ -25,8 +25,9 @@ A single-page academic profile for Ding Rui. The visual direction is precise and
 
 - Maximum content width: `90rem`.
 - Page gutters: `clamp(1.25rem, 4vw, 4.5rem)`.
-- Desktop hero: asymmetric two-column composition with text at left and a tall campus photograph at right.
-- Mobile hero: single column with the photograph following the identity and email block.
+- Desktop hero: asymmetric two-column composition with text at left and a landscape campus photograph at right.
+- Mobile hero: single column with the full-width photograph following the identity and email block.
+- Photograph edges use a four-sided alpha mask so the image blends into the white page background without a visible frame.
 - Sections are separated by full-width rules rather than floating cards.
 - All corners are square to support the record-like academic tone.
 
