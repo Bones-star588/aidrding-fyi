@@ -2,7 +2,11 @@
 
 ## Overview
 
-A single-page academic profile for Ding Rui. The visual direction combines a sea-mist neutral field, sharp editorial rules, one crimson accent, cinematic campus photography, and a dark project archive.
+A single-page academic profile for Ding Rui. The visual direction combines a full-bleed dusk photograph, sharp editorial rules, one crimson accent, sea-mist reading sections, and a dark project archive.
+
+## Redesign Audit
+
+The previous page used a split hero with two alternating campus photographs. Its identity, navigation, project evidence, research interests, and education record remain useful. This revision preserves those blocks, anchor IDs, metadata, wordmark, typefaces, and interactions. It replaces only the photograph presentation with the image supplied by the owner, removes the former image attribution because those images are no longer displayed, and keeps the readable correspondence details. Design variance: 6; motion intensity: 4; visual density: 4.
 
 ## Color
 
@@ -19,28 +23,29 @@ A single-page academic profile for Ding Rui. The visual direction combines a sea
 
 - Display and interface: Archivo variable, with platform Chinese sans-serif fallbacks.
 - Reading and research descriptions: Literata, with platform Chinese serif fallbacks.
-- No fluid type below 1rem. Display letter spacing stays at or above `-0.03em`.
+- Hero type uses fixed sizes with a mobile breakpoint and zero letter spacing.
 
 ## Layout
 
-- Maximum content width: `90rem`.
+- Maximum content width: `94rem`.
 - Page gutters: `clamp(1.25rem, 4vw, 4.5rem)`.
-- Desktop hero: asymmetric two-column composition with text at left and two high-resolution Weihai campus photographs crossfading at right.
-- Mobile hero: single column with a full-width campus photo band following the identity and email block.
-- Photograph edges use alpha masks so images dissolve into the sea-mist background without visible frames.
+- Desktop hero: full-width owner-supplied campus photograph, with identity and email over a darkened, softly blurred left edge and the campus signage visible at right.
+- Mobile hero: the same full-bleed photograph with a clear upper area and a progressive vertical blur behind the identity block.
+- A matching blurred image layer uses alpha masks to transition from sharp architecture to soft background. A lower gradient merges the photograph into the project archive.
+- The hero image has a 1280px WebP variant for smaller viewports and a 2848px WebP variant for large displays. No original image metadata is published.
 - Selected projects use a dark record-like list with expandable evidence panels rather than a generic card grid.
 - Sections are separated by full-width rules rather than floating cards.
 - All corners are square to support the record-like academic tone.
 
 ## Components
 
-- Compact sticky header with text navigation and scroll-aware active state.
+- Compact translucent sticky header with text navigation and scroll-aware active state.
 - Email link and optional copy button.
 - Expandable project entries with outcome highlights, metrics, technology, and explicit scope.
 - Rule-separated research interest list.
 - Current education record with a solid accent cap.
-- Crimson contact band containing correspondence details and image attribution.
+- Crimson contact band containing correspondence details.
 
 ## Motion
 
-The hero alternates two campus photographs with slow crossfades and restrained image drift. Project entries reveal on scroll when motion is available and expand natively on interaction. All motion is removed under reduced-motion preferences.
+The hero photograph settles once as the identity and contact details enter in sequence. Project entries reveal on scroll when motion is available and expand natively on interaction. There is no continuous background animation. All motion is removed under reduced-motion preferences.

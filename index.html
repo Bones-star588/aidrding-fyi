@@ -10,7 +10,7 @@
       content="Ding Rui is an undergraduate at Shandong University's School of Artificial Intelligence, Weihai Campus. His work spans local-first AI products, multimodal systems, and point-cloud anomaly detection."
     >
     <meta name="author" content="Ding Rui">
-    <meta name="theme-color" content="#991f1b">
+    <meta name="theme-color" content="#0b1417">
     <link rel="canonical" href="https://aidrding.fyi/">
 
     <meta property="og:type" content="profile">
@@ -22,11 +22,11 @@
     <meta property="og:url" content="https://aidrding.fyi/">
     <meta
       property="og:image"
-      content="https://aidrding.fyi/assets/images/weihai-campus-gate.jpg"
+      content="https://aidrding.fyi/assets/images/weihai-dusk.webp"
     >
     <meta
       property="og:image:alt"
-      content="The main campus entrance and red sculpture at Shandong University, Weihai."
+      content="Shandong University, Weihai, overlooking the bay at dusk."
     >
     <meta name="twitter:card" content="summary_large_image">
 
@@ -34,7 +34,9 @@
     <link
       rel="preload"
       as="image"
-      href="assets/images/weihai-campus-gate.webp"
+      href="assets/images/weihai-dusk.webp"
+      imagesrcset="assets/images/weihai-dusk-mobile.webp 1280w, assets/images/weihai-dusk.webp 2848w"
+      imagesizes="100vw"
       type="image/webp"
     >
     <link rel="stylesheet" href="styles.css">
@@ -85,7 +87,6 @@
       <section class="hero" id="top" aria-labelledby="page-title">
         <div class="hero__content">
           <p class="hero__affiliation">
-            <span class="status-dot" aria-hidden="true"></span>
             Shandong University
             <span aria-hidden="true">/</span>
             Weihai Campus
@@ -155,20 +156,16 @@
 
         <div class="hero__media" aria-hidden="true">
           <img
-            class="hero__photo hero__photo--gate"
-            src="assets/images/weihai-campus-gate.webp"
+            class="hero__photo"
+            src="assets/images/weihai-dusk.webp"
+            srcset="assets/images/weihai-dusk-mobile.webp 1280w, assets/images/weihai-dusk.webp 2848w"
+            sizes="100vw"
             alt=""
-            width="2200"
-            height="968"
+            width="2848"
+            height="1600"
             fetchpriority="high"
           >
-          <img
-            class="hero__photo hero__photo--coast"
-            src="assets/images/weihai-campus-coast.webp"
-            alt=""
-            width="1600"
-            height="1200"
-          >
+          <div class="hero__soft-focus"></div>
         </div>
       </section>
 
@@ -178,7 +175,6 @@
             <h2 id="projects-title">Selected projects</h2>
             <p>
               Independent software products and applied machine-learning research.
-              Open an entry for implementation details, measured results, and scope.
             </p>
           </header>
 
@@ -553,27 +549,7 @@
 
         <footer class="site-footer">
           <p>© <span data-current-year>2026</span> Ding Rui</p>
-          <p>
-            Campus imagery via
-            <a href="https://www.wh.sdu.edu.cn/" target="_blank" rel="noreferrer">
-              Shandong University, Weihai
-            </a>;
-            coastal photograph by
-            <a
-              href="https://commons.wikimedia.org/wiki/File:Sdu_weihei_campus_yang_yunlei.jpg"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Yang Yunlei
-            </a>,
-            <a
-              href="https://creativecommons.org/licenses/by-sa/3.0/"
-              target="_blank"
-              rel="license noreferrer"
-            >
-              CC BY-SA 3.0
-            </a>.
-          </p>
+          <p>Shandong University · Weihai Campus</p>
           <p>Updated November 2026</p>
         </footer>
       </section>
